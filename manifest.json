@@ -5,17 +5,7 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f0f8ff",
-  "theme_color": "#0066cc",
-  "icons": [
-    {
-      "src": "icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "theme_color": "#0066cc"
+  // A seção "icons" foi removida conforme sua solicitação.
+  // O navegador ou sistema operacional irá gerar um ícone padrão.
 }
