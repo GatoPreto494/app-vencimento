@@ -255,7 +255,7 @@
         <button onclick="filtrarArquivados()">Arquivados <span id="badgeArquivados" class="notification-badge"
                 style="display:none;"></span></button>
         <button onclick="filtrarDesativados()">Clientes Desativados <span id="badgeDesativados"
-                class="notification-badge" style="display:none;"></span></button>
+                style="display:none;"></span></button>
         <button onclick="mostrarContagemProdutos()">Produtos</button>
         <button onclick="exibirTodos()">Reexibir Todos</button>
         <button onclick="confirmarLimparTodos()">Limpar Todos</button>
@@ -1674,6 +1674,7 @@
             modoExibicaoVerDepois = false;
             modoExibicaoDesativados = false;
             filtroProduto = null;
+            document.getElementById("searchInput").value = "";
             exibirTabela();
             atualizarUltimaAtualizacao("pesquisa realizada");
         }
@@ -1867,9 +1868,10 @@
         loadSettings();
 
         // REGISTRO DO SERVICE WORKER (PARA PWA)
+        // CORREÇÃO: Usando './sw.js' para caminho relativo à página HTML atual
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('./sw.js') // <-- Linha corrigida aqui!
               .then(registration => {
                 console.log('Service Worker registered:', registration);
               })
