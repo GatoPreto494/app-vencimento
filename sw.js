@@ -2,6 +2,9 @@ const CACHE_NAME = 'clientes-app-cache-v1';
 const urlsToCache = [
   './', // Cache o arquivo HTML principal (index.html)
   './manifest.json'
+  // Se você separar CSS e JS em arquivos externos, adicione-os aqui:
+  // './style.css',
+  // './script.js'
 ];
 
 self.addEventListener('install', (event) => {
